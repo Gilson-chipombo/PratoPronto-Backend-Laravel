@@ -62,5 +62,5 @@ Este projeto é complemento de sistema de pedidos para **Restaurante**, focado e
 
 ### 1️ Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/restaurant-api.git
-cd restaurant-api
+git clone https://github.com/Gilson-chipombo/PratoPronto-Backend-Laravel.git
+cd PratoPronto-Backend-Laravel
