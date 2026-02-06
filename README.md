@@ -2,8 +2,10 @@
 
 API REST desenvolvida em **Laravel 12** para gestão de usuários, menus, categorias e pedidos, com autenticação JWT, controle de acesso por roles e upload de imagens.
 
-Este projeto simula um **backend real de restaurante**, focado em boas práticas de API, segurança e escalabilidade.
+Este projeto é complemento de sistema de pedidos para **Restaurante**, focado em boas práticas de API, segurança e escalabilidade.
 
+# FrontEnd da aplicação Web
+- Pode accessar o projecto neste link: https://pratopronto.vercel.app/
 ---
 
 ## Funcionalidades
