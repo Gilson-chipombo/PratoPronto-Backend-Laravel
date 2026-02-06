@@ -50,7 +50,7 @@ Este projeto é complemento de sistema de pedidos para **Restaurante**, focado e
 
 - **PHP 8.3**
 - **Laravel 12**
-- **MySQL / PostgreSQL**
+- **MySQL**
 - **JWT Auth**
 - **Eloquent ORM**
 - **Laravel Middleware**
