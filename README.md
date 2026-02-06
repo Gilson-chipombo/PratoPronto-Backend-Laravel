@@ -1,4 +1,4 @@
-# 🍽️ Restaurant Management API
+# 🍽️ RAPI do Sistema de Pedidos de Reestaurante
 
 API REST desenvolvida em **Laravel 12** para gestão de usuários, menus, categorias e pedidos, com autenticação JWT, controle de acesso por roles e upload de imagens.
 
