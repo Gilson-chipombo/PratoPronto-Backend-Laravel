@@ -4,36 +4,40 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     //
-    public function login(Request $reques)
+    public function teste()
+    {
+        return response()->json(['message' => 'success']);
+    }
+
+    public function login(Request $request)
     {
         $data = $request->validate([
             'email'    => 'required|email',
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $data[email])->first();
-        if (!$user) return response()->status(404)->json(['message' => 'User not found']);
-        
-        if (!Hash::check($data[password], $user->password)) return response()->json(['message' => 'Invalid credentials']);
+        $user = User::where('email', $data['email'])->first();
+        if (!$user) return response()->json(['message' => 'User not found'], 404);
+        if (!Hash::check($data['password'], $user->password)) return response()->json(['message' => 'Invalid credentials']);
 
         $token = $user->createToken('api-token')->plainTextToken;
 
-        return response()->status(200)->json([
-            'toke' => $token,
+        return response()->json([
+            'token' => $token,
             'user' => $user
-        ]);
+        ], 200);
     }
 
     public function logout(Request $request)
     {
         $request->user()->currenAccessToken()->delete();
 
-        return response()->status(200)->json(['message' => 'Logout success']);
+        return response()->json(['message' => 'Logout success'], 200);
     }
 }

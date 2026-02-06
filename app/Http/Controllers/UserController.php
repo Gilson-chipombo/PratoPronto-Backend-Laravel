@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function home(){ return view('hello'); }
+    /*public function home(){ return view('hello'); }
 
     public function index()
     {
@@ -56,4 +56,5 @@ class UserController extends Controller
         User::destroy($id);
         return redirect('/users');
     }
+       */ 
 }
